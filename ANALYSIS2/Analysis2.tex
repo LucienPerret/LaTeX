@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper,landscape]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
@@ -17,37 +17,74 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{xcolor}
-\usepackage{mdframed}
+\usepackage[framemethod=tikz]{mdframed}
 \usepackage{csquotes}
 \usepackage{trfsigns}
 \usepackage{capt-of}
+\usepackage{comment}
+\usepackage{tabularray}
+\usepackage{multicol}
+\definecolor{MyCol1}{HTML}{E9A27C}
+\definecolor{MyCol2}{HTML}{E7BBA6}
+\definecolor{MyCol3}{HTML}{8CB6BC}
+\definecolor{MyCol4}{HTML}{0E8992}
+\definecolor{MyCol5}{HTML}{0D313A}
 
-\mdfdefinestyle{exercise}{
-	backgroundcolor=black!10,align=cente,roundcorner=8pt,hidealllines=true,nobreak,
+
+
+\mdfdefinestyle{standard}{
+	backgroundcolor=MyCol2, align=center,roundcorner=8pt,hidealllines=true,nobreak,
+	leftmargin=0cm,rightmargin=0cm,innertopmargin=0.25cm,innerbottommargin=0.25cm
 }
 
-\begin{document}
-\twocolumn
- \section*{Standard Ab/Aufleitungen} 
-\begin{mdframed}[style=exercise]
-\begin{align*}
-	\begin{tabular}{|c|c|c|}
-		\hline
-		function & derivative & integral\\
-		\hline
-		x & 1 & _\\
-		\hline
-		x^a | a \epsilon \numberset{R} & ax^{a-1} & _ \\
-		\hline
-		\sin(x) & \cos(x) & -\cos(x)\\
-		\hline
-		\cos(x) & -\sin(x) & \sin(x)\\
-		\hline
-		\tan(x) & \frac{1}{\cos^2(x)} & -\ln(\cos(x))\\
-		\hline
-		\cot(x) & -\frac{1}{\sin^2(x)} & \ln(\sin(x))\\
-		\hline
-	\end{tabular}
-\end{align*}
-\end{mdframed}
+
+
+\begin{document}{}
+\begin{multicols*}{3}
+
+\section*{\centering Standard Derivative \& Integral}
+	\begin{mdframed}[style=standard]
+		\resizebox*{\textwidth}{!}{
+		\def\arraystretch{1.5} 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Function | f(x) & Derivative | f'(x) & Integral | F(x)\\
+			\hline
+			\(1\) & \(0\) & \(x+C\) \\
+			\hline
+			\(x\) & \(1\) & \(\frac{1}{2}x^2+C\) \\
+			\hline
+			\(\frac{1}{x}\) & \(-\frac{1}{x^2}\) & \(\ln|x|+C\) \\
+			\hline
+			\(x^a \: with \: a \: \in \: \mathbb{R}\) & \(ax^{a-1}\) & \(\frac{x^{a+1}}{a+1}+C\) \\
+			\hline
+			\(\sin(x)\) & \(\cos(x)\) & \(-\cos(x)+C\) \\
+			\hline
+			\(\cos(x)\) & \(-\sin(x)\) & \(\sin(x)+C\) \\
+			\hline
+			\(\tan(x)\) & \(1+\tan^2{(x)=\frac{1}{\cos^2{(x)}}}\) & \(-\ln|\cos(x)|+C\) \\
+			\hline
+			\(\cot(x)\) & \(-1-\cot^2{(x)}=-\frac{1}{\sin^2{(x)}}\) & \(\ln(\sin(x))+C\) \\
+			\hline
+			\(e^x\) & \(e^x\) & \(e^x+C\) \\
+			\hline
+			\(a^x\) & \(\ln(a)\cdot a^x\) & \(\frac{a^x}{\ln(a)}+C\) \\
+			\hline
+			\(\ln(x)\) & \(\frac{1}{x}\) & \(x\ln(x)-x+C\) \\
+			\hline
+			\(\log_a(x)\) & \(\frac{1}{x\ln(a)}\) & \(x\log_a(x)-\frac{x}{\ln(a)}+C\) \\
+			\hline
+			\(\arcsin(x)\) & \(\frac{1}{\sqrt{1-x^2}}\) & \(x\arcsin(x)+\sqrt{1-x^2}+C\) \\
+			\hline
+			\(\arccos(x)\) & \(-\frac{1}{\sqrt{1-x^2}}\) & \(x\arccos(x)-\sqrt{1-x^2}+C\) \\
+			\hline
+			\(\arctan(x)\) & \(\frac{1}{1+x^2}\) & \(x\arctan(x)-\frac{1}{2}\ln(1+x^2)+C\) \\
+			\hline
+		\end{tabular}
+		}
+	\end{mdframed}
+
+
+
+\end{multicols*}
 \end{document}
