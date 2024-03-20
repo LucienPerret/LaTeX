@@ -1,0 +1,53 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{physics}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=1.5cm]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{mhchem}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{csquotes}
+\usepackage{trfsigns}
+\usepackage{capt-of}
+
+\mdfdefinestyle{exercise}{
+	backgroundcolor=black!10,align=cente,roundcorner=8pt,hidealllines=true,nobreak,
+}
+
+\begin{document}
+\twocolumn
+ \section*{Standard Ab/Aufleitungen} 
+\begin{mdframed}[style=exercise]
+\begin{align*}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		function & derivative & integral\\
+		\hline
+		x & 1 & _\\
+		\hline
+		x^a | a \epsilon \numberset{R} & ax^{a-1} & _ \\
+		\hline
+		\sin(x) & \cos(x) & -\cos(x)\\
+		\hline
+		\cos(x) & -\sin(x) & \sin(x)\\
+		\hline
+		\tan(x) & \frac{1}{\cos^2(x)} & -\ln(\cos(x))\\
+		\hline
+		\cot(x) & -\frac{1}{\sin^2(x)} & \ln(\sin(x))\\
+		\hline
+	\end{tabular}
+\end{align*}
+\end{mdframed}
+\end{document}
