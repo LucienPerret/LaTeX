@@ -8,7 +8,7 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 \usepackage{physics}
-\usepackage[left=1cm,right=1cm,top=2cm,bottom=1.5cm]{geometry}
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry}
 \usepackage{siunitx}
 \usepackage{fancyhdr}
 \usepackage{enumerate}
@@ -24,6 +24,10 @@
 \usepackage{comment}
 \usepackage{tabularray}
 \usepackage{multicol}
+\usepackage{titlesec}
+\titlespacing{\section}{0pc}{1ex}{1ex}
+\columnseprule=0.4pt
+
 \definecolor{MyCol1}{HTML}{E9A27C}
 \definecolor{MyCol2}{HTML}{E7BBA6}
 \definecolor{MyCol3}{HTML}{8CB6BC}
@@ -31,60 +35,88 @@
 \definecolor{MyCol5}{HTML}{0D313A}
 
 
+\newmdenv[backgroundcolor=black!10,align=center,roundcorner=8pt,hidealllines=true,nobreak,
+	leftmargin=0cm,rightmargin=0cm,innertopmargin=0.15cm,innerbottommargin=0.15cm,skipabove = 0,
+	skipbelow = 0]
+	{standard}
 
-\mdfdefinestyle{standard}{
-	backgroundcolor=MyCol2, align=center,roundcorner=8pt,hidealllines=true,nobreak,
-	leftmargin=0cm,rightmargin=0cm,innertopmargin=0.25cm,innerbottommargin=0.25cm
-}
-
+\newenvironment{Standard}{\standard\centering}{\endstandard}
 
 
 \begin{document}{}
 \begin{multicols*}{3}
 
 \section*{\centering Standard Derivative \& Integral}
-	\begin{mdframed}[style=standard]
-		\resizebox*{\textwidth}{!}{
-		\def\arraystretch{1.5} 
-		\begin{tabular}{|c|c|c|}
-			\hline
-			Function | f(x) & Derivative | f'(x) & Integral | F(x)\\
-			\hline
-			\(1\) & \(0\) & \(x+C\) \\
-			\hline
-			\(x\) & \(1\) & \(\frac{1}{2}x^2+C\) \\
-			\hline
-			\(\frac{1}{x}\) & \(-\frac{1}{x^2}\) & \(\ln|x|+C\) \\
-			\hline
-			\(x^a \: with \: a \: \in \: \mathbb{R}\) & \(ax^{a-1}\) & \(\frac{x^{a+1}}{a+1}+C\) \\
-			\hline
-			\(\sin(x)\) & \(\cos(x)\) & \(-\cos(x)+C\) \\
-			\hline
-			\(\cos(x)\) & \(-\sin(x)\) & \(\sin(x)+C\) \\
-			\hline
-			\(\tan(x)\) & \(1+\tan^2{(x)=\frac{1}{\cos^2{(x)}}}\) & \(-\ln|\cos(x)|+C\) \\
-			\hline
-			\(\cot(x)\) & \(-1-\cot^2{(x)}=-\frac{1}{\sin^2{(x)}}\) & \(\ln(\sin(x))+C\) \\
-			\hline
-			\(e^x\) & \(e^x\) & \(e^x+C\) \\
-			\hline
-			\(a^x\) & \(\ln(a)\cdot a^x\) & \(\frac{a^x}{\ln(a)}+C\) \\
-			\hline
-			\(\ln(x)\) & \(\frac{1}{x}\) & \(x\ln(x)-x+C\) \\
-			\hline
-			\(\log_a(x)\) & \(\frac{1}{x\ln(a)}\) & \(x\log_a(x)-\frac{x}{\ln(a)}+C\) \\
-			\hline
-			\(\arcsin(x)\) & \(\frac{1}{\sqrt{1-x^2}}\) & \(x\arcsin(x)+\sqrt{1-x^2}+C\) \\
-			\hline
-			\(\arccos(x)\) & \(-\frac{1}{\sqrt{1-x^2}}\) & \(x\arccos(x)-\sqrt{1-x^2}+C\) \\
-			\hline
-			\(\arctan(x)\) & \(\frac{1}{1+x^2}\) & \(x\arctan(x)-\frac{1}{2}\ln(1+x^2)+C\) \\
-			\hline
-		\end{tabular}
-		}
-	\end{mdframed}
+\begin{Standard}
+	\resizebox*{\textwidth}{!}{
+	\def\arraystretch{1.5} 
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Function | f(x) & Derivative | f'(x) & Integral | F(x)\\
+		\hline
+		\(1\) & \(0\) & \(x+C\) \\
+		\hline
+		\(x\) & \(1\) & \(\frac{1}{2}x^2+C\) \\
+		\hline
+		\(\frac{1}{x}\) & \(-\frac{1}{x^2}\) & \(\ln|x|+C\) \\
+		\hline
+		\(x^a \: with \: a \: \in \: \mathbb{R}\) & \(ax^{a-1}\) & \(\frac{x^{a+1}}{a+1}+C\) \\
+		\hline
+		\(\sin(x)\) & \(\cos(x)\) & \(-\cos(x)+C\) \\
+		\hline
+		\(\cos(x)\) & \(-\sin(x)\) & \(\sin(x)+C\) \\
+		\hline
+		\(\tan(x)\) & \(1+\tan^2{(x)=\frac{1}{\cos^2{(x)}}}\) & \(-\ln|\cos(x)|+C\) \\
+		\hline
+		\(\cot(x)\) & \(-1-\cot^2{(x)}=-\frac{1}{\sin^2{(x)}}\) & \(\ln(\sin(x))+C\) \\
+		\hline
+		\(e^x\) & \(e^x\) & \(e^x+C\) \\
+		\hline
+		\(a^x\) & \(\ln(a)\cdot a^x\) & \(\frac{a^x}{\ln(a)}+C\) \\
+		\hline
+		\(\ln(x)\) & \(\frac{1}{x}\) & \(x\ln(x)-x+C\) \\
+		\hline
+		\(\log_a(x)\) & \(\frac{1}{x\ln(a)}\) & \(x\log_a(x)-\frac{x}{\ln(a)}+C\) \\
+		\hline
+		\(\arcsin(x)\) & \(\frac{1}{\sqrt{1-x^2}}\) & \(x\arcsin(x)+\sqrt{1-x^2}+C\) \\
+		\hline
+		\(\arccos(x)\) & \(-\frac{1}{\sqrt{1-x^2}}\) & \(x\arccos(x)-\sqrt{1-x^2}+C\) \\
+		\hline
+		\(\arctan(x)\) & \(\frac{1}{1+x^2}\) & \(x\arctan(x)-\frac{1}{2}\ln(1+x^2)+C\) \\
+		\hline
+	\end{tabular}
+	}
+\end{Standard}
 
+\section*{\centering Partial Fraction Decomposition}
+\begin{Standard}
+	\begin{enumerate}
+		\item The fractions numerator needs to be of a lower \\ polynomial degree than the denominator	
+		\item Guess one of the Zeros with the values: \\ \((-3,-2,-1,1,2,3)\)
+		\item
+	\end{enumerate}
+\end{Standard}
 
+\section*{\centering Horners Method}
+\begin{Standard}
+	begin by guessing one of the zero points with the values:
+	\((-3,-2,-1,1,2,3)\) \\
+	\vspace{10pt}
+	\(f(x)=5x^3-8x^2-27x+18 \rightarrow \textcolor{MyCol4}{x=-2}\) \\
+	\vspace{10pt}
+	factors before x go into table \\
+	\(\downarrow \) \\ 
+	\resizebox*{\textwidth}{!}{
+	\begin{tabular}{cccc}
+		\(5\) & \(-8\) & \(-27\) & \(18\) \\
+		\rule{0pt}{3ex}	
+		\( \; \)	& \(5 \cdot \textcolor{MyCol4}{(-2)}=-10\) & \(-18\cdot \textcolor{MyCol4}{(-2)}=36\) &
+		\(9\cdot \textcolor{MyCol4}{(-2)}=-18\) \\
+		\rule{0pt}{3ex}	
+		\(5\) & \(-8+(-10)=-18\) & \(-27+36=9\) & \(18+(-18)=0\) \\
+	\end{tabular}
+	}
+\end{Standard}
 
 \end{multicols*}
 \end{document}

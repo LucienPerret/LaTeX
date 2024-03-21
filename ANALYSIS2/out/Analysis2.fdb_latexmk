@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1710959570 "c:/LaTeX/ANALYSIS2/Analysis2.tex" "out/Analysis2.pdf" "Analysis2" 1710959572 0
-  "Analysis2.tex" 1710959569 2605 390aff0af3871d9e7f8e05e70448a475 ""
-  "c:/LaTeX/ANALYSIS2/Analysis2.tex" 1710959569 2605 390aff0af3871d9e7f8e05e70448a475 ""
+["pdflatex"] 1711033283 "c:/LaTeX/ANALYSIS2/Analysis2.tex" "out/Analysis2.pdf" "Analysis2" 1711033285 0
+  "Analysis2.tex" 1711033281 3712 264e1e9bc8d4dc041fbbf2d93b57e158 ""
+  "c:/LaTeX/ANALYSIS2/Analysis2.tex" 1711033281 3712 264e1e9bc8d4dc041fbbf2d93b57e158 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1702474266 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1702474266 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1702474266 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -172,6 +172,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/physics/physics.sty" 1702474819 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "c:/texlive/2023/texmf-dist/tex/latex/siunitx/siunitx.sty" 1702475233 330031 776624320aa96f4ab6d7dda56aa3886e ""
   "c:/texlive/2023/texmf-dist/tex/latex/tabularray/tabularray.sty" 1702475366 250191 d1baa9d0d78f8f2fd48f4703ed6ad4de ""
+  "c:/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty" 1702475544 48766 0b93839be28e9744a24c45075c75b2e2 ""
   "c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty" 1702475576 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty" 1702475576 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "c:/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty" 1702475576 3468 0ef513f22d965f96b06adb5cff671cd7 ""
@@ -186,7 +187,7 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1702475926 4754717 4250d955b10078f543be79be1d7b897e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1702476044 8217693 6f7f624b0d1f5946ee8cce9dd162659a ""
   "c:/texlive/2023/texmf.cnf" 1702475904 713 e69b156964470283e0530f5060668171 ""
-  "out/Analysis2.aux" 1710959572 210 9323d5077b3bf22af6dbecf6c9e34553 "pdflatex"
+  "out/Analysis2.aux" 1711033285 292 c90fc0e3d4b07c2ea4083ce118f53805 "pdflatex"
   (generated)
   "out/Analysis2.aux"
   "out/Analysis2.log"
