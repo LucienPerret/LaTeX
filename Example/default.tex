@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=1.5cm]{geometry}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{amsmath} 
+
+\mdfdefinestyle{default}{
+	backgroundcolor=black!10,roundcorner=8pt,hidealllines=true,nobreak
+}
+
+\begin{document}
+	\begin{landscape}
+		\begin{multicols*}{3}
+			\section{Titel}
+				\begin{mdframed}[style=default]
+					Text 1
+					\begin{align*}
+						Math 1
+					\end{align*}
+				\end{mdframed}
+			\section{Titel 2}
+				\begin{mdframed}[style=default]
+					Text 2
+				\end{mdframed}
+		\end{multicols*}
+	\end{landscape}
+\end{document}
